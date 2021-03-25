@@ -37,9 +37,7 @@ function App() {
         from: metamask.selectedAddress,
       });
 
-      setAddress(
-        result === '0x0000000000000000000000000000000000000000' ? 0 : result
-      );
+      setAddress(result);
     };
     getAddress();
   }, [currentAccount, metamask]);
