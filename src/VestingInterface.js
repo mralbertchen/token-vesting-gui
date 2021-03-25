@@ -80,6 +80,7 @@ function VestingInterface({ vestingContractAddress }) {
     return () => {
       clearInterval(interval);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const claimTokens = async () => {
