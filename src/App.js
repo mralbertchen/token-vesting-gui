@@ -44,8 +44,6 @@ function App() {
 
   if (!metamask) return <Center>Metamask not installed!</Center>;
 
-  if (!metamask.selectedAddress) return <Center>Please log in!</Center>;
-
   return (
     <Container height="100vh">
       <Flex direction="column" height="100%" width="100%">
