@@ -65,15 +65,18 @@ function App() {
             </Button>
           )}
         </Center>
-        <Flex flexGrow={1}>
-          {!address ? (
+
+        {!address ? (
+          <Center flexGrow={1}>
             <Spinner size="xl" color="teal.500" />
-          ) : address === '0x0000000000000000000000000000000000000000' ? (
-            'Your address does not have a vesting contract! Please make sure your network and metamask address are correct.'
-          ) : (
+          </Center>
+        ) : address === '0x0000000000000000000000000000000000000000' ? (
+          'Your address does not have a vesting contract! Please make sure your network and metamask address are correct.'
+        ) : (
+          <Flex flexGrow={1}>
             <VestingInterface vestingContractAddress={address} />
-          )}
-        </Flex>
+          </Flex>
+        )}
       </Flex>
     </Container>
   );
